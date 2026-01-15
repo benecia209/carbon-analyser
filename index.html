@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Carbon Analyser</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <nav>
+    <h1>⚡ AI Carbon Analyser</h1>
+    <p>Smart Energy • Less Carbon • More Savings</p>
+  </nav>
+
+  <!-- Houses Section -->
+  <section class="house-section">
+    <div class="house">
+      <h2>🏠 House 1 – Without AI</h2>
+      <p>Status: <span id="status1">Empty</span></p>
+      <p>Light: <span id="light1">OFF</span></p>
+      <p>Energy: <span id="energy1">0</span> kWh</p>
+      <p>Cost: ₹<span id="cost1">0</span></p>
+      <button onclick="enterHouse1()">Person Enters</button>
+      <button onclick="leaveHouse1()">Person Leaves</button>
+    </div>
+
+    <div class="house">
+      <h2>🏠 House 2 – With AI</h2>
+      <p>Status: <span id="status2">Empty</span></p>
+      <p>Light: <span id="light2">OFF</span></p>
+      <p>Energy: <span id="energy2">0</span> kWh</p>
+      <p>Cost: ₹<span id="cost2">0</span></p>
+      <button onclick="enterHouse2()">Person Enters</button>
+      <button onclick="leaveHouse2()">Person Leaves</button>
+    </div>
+  </section>
+
+  <!-- Summary -->
+  <section class="summary">
+    <h2>📊 Summary</h2>
+    <p>Energy Saved: <span id="savedEnergy">0</span> kWh</p>
+    <p>Money Saved: ₹<span id="savedMoney">0</span></p>
+    <p>Carbon Reduced: <span id="carbon">0</span> kg CO₂</p>
+  </section>
+
+  <!-- Manual Mode -->
+  <section class="manual">
+    <h2>Manual Demo Mode</h2>
+    <input id="manualBefore" type="number" placeholder="Before AI (kWh)">
+    <input id="manualAfter" type="number" placeholder="After AI (kWh)">
+    <button onclick="manualUpdate()">Apply</button>
+  </section>
+
+  <!-- Graph Section -->
+  <section class="graph">
+    <canvas id="chart"></canvas>
+  </section>
+
+  
+  <!-- PDF Report -->
+  <section class="report">
+    <h2>📄 Download Report</h2>
+    <button onclick="downloadReport()">Download PDF</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

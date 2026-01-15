@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+}
+
+nav {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.house-section {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.house {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+button {
+  margin: 8px;
+  padding: 10px 15px;
+  background: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #43a047;
+}
+
+.summary, .manual, .qr, .report {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.graph {
+  padding: 20px;
+}
